@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 @st.cache_data
 def load_default_data():
     return pd.read_csv(
-       r'C:\Users\Extreme\OneDrive\Desktop\streamlit  dashboards\pharmacy analytic\Shelf_Monitoring_and_Cheakout_Efficiency.csv'
+       'Shelf_Monitoring_and_Cheakout_Efficiency.csv'
     )
 
 # Function to load uploaded files (supports Excel and CSV)

@@ -453,41 +453,9 @@ elif dataset_choice == "Shelf Monitoring Dataset":
 
         with col1:
             st.plotly_chart(gauge_figures[0], use_container_width=True)  # Total Checks
-        with col2:
-            st.plotly_chart(gauge_figures[1], use_container_width=True)  # Total Customers
+       
         with col3:
             st.plotly_chart(gauge_figures[2], use_container_width=True)  # Total Visitors
-
-        # Second row of gauges (remaining metrics)
-        col4, col5 = st.columns(2)
-
-        with col4:
-            st.plotly_chart(gauge_figures[3], use_container_width=True)  # Queue Count
-        with col5:
-            st.plotly_chart(gauge_figures[4], use_container_width=True)  # Current Visitor
-
-        # Optional: Summary bar chart for all metrics
-        st.subheader("Metric Summary - Bar Chart")
-        bar_fig = go.Figure(go.Bar(
-            x=list(metrics.keys()),
-            y=list(metrics.values()),
-            text=list(metrics.values()),
-            textposition='auto',
-            marker_color=gauge_colors  # Use the distinct colors for the bar chart
-        ))
-
-        bar_fig.update_layout(
-            title="Overall Metric Summary",
-            xaxis_title="Metrics",
-            yaxis_title="Values",
-            template="plotly_dark",
-            plot_bgcolor="rgba(0,0,0,0)",
-            paper_bgcolor="rgba(0,0,0,0)",
-            title_font=dict(size=24),
-            xaxis_title_font=dict(size=18),
-            yaxis_title_font=dict(size=18)
-        )
-        st.plotly_chart(bar_fig)
 
         # Combined line chart of Customers and Visitors
         fig = go.Figure()

@@ -454,7 +454,7 @@ elif dataset_choice == "Shelf Monitoring Dataset":
         with col1:
             st.plotly_chart(gauge_figures[0], use_container_width=True)  # Total Checks
        
-        with col3:
+        with col2:
             st.plotly_chart(gauge_figures[2], use_container_width=True)  # Total Visitors
 
         # Combined line chart of Customers and Visitors
